@@ -5,14 +5,18 @@ Pantallas: **Inicio**, **Playlist** y **Reproductor**, con navegación entre ell
 
 ## Cómo ejecutarlo
 
-Requisitos: PHP 8.2+, Composer, Node 20+ (con Laravel Herd ya está todo).
+Requisitos: PHP 8.2+, Composer y Node 20+ (con Laravel Herd ya está todo).
 
-1. Crea un proyecto Laravel nuevo (el kit por defecto ya trae Vite y Tailwind v4):
-   `composer create-project laravel/laravel sonora && cd sonora`
-2. Copia el contenido de esta carpeta encima del proyecto, aceptando reemplazar:
-   `app/`, `routes/web.php`, `resources/css/app.css`, `resources/js/app.js`, `resources/views/`
-3. `npm install`
-4. `npm run dev` (terminal 1) y `php artisan serve` (terminal 2), o abre el sitio desde Herd.
+1. Clona el repositorio y entra a la carpeta:
+   `git clone https://github.com/SrSoloX/sonora.git && cd sonora`
+2. Instala las dependencias:
+   `composer install` y `npm install`
+3. Prepara el entorno:
+   `cp .env.example .env` (en PowerShell: `copy .env.example .env`)
+   `php artisan key:generate`
+   `php artisan migrate`
+4. Ejecuta el proyecto (dos terminales):
+   `npm run dev` y `php artisan serve`
 5. Abre http://localhost:8000
 
 ## Estructura
