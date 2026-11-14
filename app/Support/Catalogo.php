@@ -2,27 +2,24 @@
 
 namespace App\Support;
 
-/**
- * Datos de ejemplo INVENTADOS (nada de artistas ni portadas reales).
- * Más adelante se puede reemplazar por el modelo Track (ver README, fase 2).
- */
+
 class Catalogo
 {
     /** @return array<int, array{id:int,titulo:string,artista:string,album:string,dur:int}> */
     public static function pistas(): array
     {
         $datos = [
-            ['Noches de lluvia', 'Mar Abierto',   'Hora lenta',     258],
-            ['Hora azul',        'Luz de Norte',  'Costa vacía',    232],
-            ['Cuerdas',          'Estudio Cinco', 'Sala 5',         307],
-            ['Caminos',          'Mar Abierto',   'Hora lenta',     209],
-            ['Sin prisa',        'Luz de Norte',  'Costa vacía',    284],
-            ['Faro del sur',     'Paso Lento',    'Mapa de sal',    241],
-            ['Ventana abierta',  'Cielo Bajo',    'Tarde larga',    198],
-            ['Marea baja',       'Mar Abierto',   'Hora lenta',     266],
-            ['Café y neblina',   'Estudio Cinco', 'Sala 5',         223],
-            ['Último tren',      'Paso Lento',    'Mapa de sal',    295],
-        ];
+    ['Calle sin nombre',   'Los Faroles',    'Madrugada',     258],
+    ['Tarde de domingo',   'Nube Roja',      'Costa quieta',  232],
+    ['Piedra y río',       'Taller Siete',   'Sala 7',        307],
+    ['Rumbo a casa',       'Los Faroles',    'Madrugada',     209],
+    ['Despacio',           'Nube Roja',      'Costa quieta',  284],
+    ['Luz del puerto',     'Viento Largo',   'Mapa de arena', 241],
+    ['Balcón de abril',    'Cielo Chico',    'Tarde corta',   198],
+    ['Marea alta',         'Los Faroles',    'Madrugada',     266],
+    ['Té y llovizna',      'Taller Siete',   'Sala 7',        223],
+    ['Tren de medianoche', 'Viento Largo',   'Mapa de arena', 295],
+];
 
         return array_map(
             fn ($d, $i) => [
